@@ -1,0 +1,23 @@
+{
+  "functions": {
+    "api/deletion.js": {
+      "runtime": "nodejs22.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/deletion",
+      "destination": "/api/deletion"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/deletion",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+      ]
+    }
+  ]
+}
